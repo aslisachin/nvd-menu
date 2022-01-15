@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     
+    <script>
+        if (window.location.search.indexOf('age') > -1) {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const name = urlParams.get('name');
+            const pa = urlParams.get('age');
+            var user;
+            if (name !== "") user = name;
+            else user = name;
+            const url = 'upi://pay' + queryString;
+            document.getElementById("name").innerHTML = "Click on PayNow or Scan Qr and Pay using any UPI Apps To Pay " + user;
+            document.getElementById("linkpe").href = url;
+        } else {
+            alert('Nothing');
+        }
+    </script>
+    
+    <p id="name"></p>
+    <a id="linkpe" href="">Link</a>
 </body>
+
 </html>
